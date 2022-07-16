@@ -4,4 +4,4 @@ jobs:
   environment:
     name:  New_web
     resourceType: VirtualMachine
-    tags: web
+    tags: web_devops
