@@ -1,13 +1,17 @@
+trigger: 
+- main
+
+pool: 
+   vmImage: ubuntu-latest
+
 jobs:
 - deployment: VMDeploy
-  displayName: web_devops
-  pool:
-    vmImage: 'Ubuntu-latest'
-  environment:
-    name: Web_devops_VM
-    resourceType: VirtualMachine
+  displayName: Deploy to VM
+  environment: 
+   name: ContosoDeploy
+   resourceType: VirtualMachine
   strategy:
-      runOnce:
-        deploy:
+     runOnce:
+        deploy:   
           steps:
-          - script: echo my first deployment
+            - script: echo "Hello world"
