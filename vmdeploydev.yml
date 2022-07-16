@@ -1,0 +1,7 @@
+jobs:  
+- deployment: VMDeploy
+  displayName: web
+  environment:
+    name:  New_web
+    resourceType: VirtualMachine
+    tags: web
